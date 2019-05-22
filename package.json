@@ -1,0 +1,19 @@
+{
+  "name": "customer-crud",
+  "version": "1.0.0",
+  "description": "Single Page Customer Application that performs CRUD operations on customer data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harunozceyhan/customer-crud.git"
+  },
+  "author": "Harun Ozceyhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harunozceyhan/customer-crud/issues"
+  },
+  "homepage": "https://github.com/harunozceyhan/customer-crud#readme"
+}
