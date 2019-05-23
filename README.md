@@ -16,7 +16,7 @@ Default connection url: **_mongodb://127.0.0.1:27017/Customer_**
 ## Installation
 
 - `git clone https://github.com/harunozceyhan/customer-crud.git`
-- `npm run install`
+- `npm install`
 - `npm run fullinstall`
 - `npm run start`
 
