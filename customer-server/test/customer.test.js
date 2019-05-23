@@ -13,7 +13,7 @@ let mockData = {
 };
 let createdCustomerId = 0;
 
-describe('Unit testing the post /api route', function() {
+describe('Testing the post /api route', function() {
 
     it('should return OK status', function() {
         return request(app)
@@ -37,7 +37,7 @@ describe('Unit testing the post /api route', function() {
 
 });
 
-describe('Unit testing the /api route', function() {
+describe('Testing the get /api route', function() {
 
     it('should return OK status', function() {
         return request(app)
@@ -57,7 +57,7 @@ describe('Unit testing the /api route', function() {
 
 });
 
-describe('Unit testing the /api/:id route', function() {
+describe('Testing the get /api/:id route', function() {
 
     it('should return OK status', function() {
         return request(app)
@@ -69,7 +69,7 @@ describe('Unit testing the /api/:id route', function() {
 
 });
 
-describe('Unit testing the put /api/:id route', function() {
+describe('Testing the put /api/:id route', function() {
 
     it('should return OK status', function() {
         console.log(createdCustomerId);
@@ -84,7 +84,7 @@ describe('Unit testing the put /api/:id route', function() {
 
 });
 
-describe('Unit testing the delete /api/:id route', function() {
+describe('Testing the delete /api/:id route', function() {
 
     it('should return OK status', function() {
         return request(app)
