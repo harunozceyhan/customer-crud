@@ -8,7 +8,7 @@ class Header extends Component {
         return (
             <div>
                 <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/customers">
                         <img alt="" src={logo} width="30"  height="30" className="d-inline-block align-top" />
                         {'Customer CRUD'}
                     </Navbar.Brand>

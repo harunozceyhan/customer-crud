@@ -3,6 +3,12 @@ import { GET_ALL_CUSTOMERS, GET_CUSTOMER_DETAIL } from '../actions/types';
 const initialState = {
     customerDetail: {
         customerID: '',
+        firstName: '',
+        lastName: '',
+        birthday: (new Date().toISOString()),
+        gender: '',
+        lastContact: (new Date().toISOString()),
+        customerLifetimeValue: ''
     },
     customerList: []
 }

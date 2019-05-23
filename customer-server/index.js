@@ -26,8 +26,7 @@ app.use(cors());
 // Set up customer routes with path /api
 app.use('/api', customer);
 
-var port = process.env.HOST_PORT || 3001;
-
-app.listen(port, () => {
-    console.log('Server is up and running on port number ' + port);
+// port = 3001
+app.listen(3001, () => {
+    console.log('Server is up and running on port number 3001');
 });

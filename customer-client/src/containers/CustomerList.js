@@ -16,17 +16,17 @@ class CustomerList extends Component {
     }
 
     onCustomerDeleteClick = (customerId) => {
-
+        // Delete customer with given customerId
         axios.delete(`${serverApiUrl}/${customerId}`).then(response => {
             toastr.success('Success', 'Customer deleted successfully!');
-            this.props.fetchAllCustomerData();
+            this.props.fetchAllCustomerData();  // Fetch data after successful delete operation.
         }).catch(error => {
             toastr.error('Error', 'An error has occured while deleting customer!');
         });
     };
 
     render() {
-        const {customers} = this.props;
+        const {customers} = this.props; // Customer List that fetched in thunk middleware.
         return (
             <div>
                 <Card>
