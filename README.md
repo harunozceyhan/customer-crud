@@ -9,9 +9,9 @@ Single Page Customer Application that performs CRUD operations on customer data.
 
 ## Pre-Requisites
 
->To configure MongoDB connection URL, simply rename file .env.example to .env in customer-server folder.
-Then edit MONGODB_URI and enter your _username_, _password_, _host_, _port_, _database_ info.
-Default connection url: **_mongodb://127.0.0.1:27017/Customer_**
+>To configure MongoDB connection URL, simply rename file .env.example to .env in customer-server folder.  
+Then edit MONGODB_URI and enter your _username_, _password_, _host_, _port_, _database_ info.  
+Default connection url: **_mongodb://127.0.0.1:27017/Customer_**  
 
 ## Installation
 
