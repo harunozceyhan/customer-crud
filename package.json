@@ -4,7 +4,12 @@
   "description": "Single Page Customer Application that performs CRUD operations on customer data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "customer-server-start": "cd customer-server && npm run start",
+    "customer-client-start": "cd customer-client && npm run start",
+    "customer-client-npm-install": "cd customer-client && npm install",
+    "customer-server-npm-install": "cd customer-server && npm install",
+    "fullinstall": "npm run customer-client-npm-install && npm run customer-server-npm-install",
+    "start": "npm-run-all -p customer-server-start customer-client-start"
   },
   "repository": {
     "type": "git",
