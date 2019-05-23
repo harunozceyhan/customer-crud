@@ -1,8 +1,8 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const AutoIncrement = require('mongoose-sequence')(mongoose);
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var CustomerSchema = new Schema({
+let CustomerSchema = new Schema({
     customerID: {type: Number, index: true},
 	firstName: {type: String, required: true, max: 100},
     lastName: {type: String, required: true, max: 100},

@@ -11,15 +11,22 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // Set up mongoose connection
-var dev_db_url = 'mongodb://127.0.0.1:27017/Customer';
-var mongoDBUrlString = process.env.MONGODB_URI || dev_db_url;
+let dev_db_url = 'mongodb://127.0.0.1:27017/Customer';
+let mongoDBUrlString = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDBUrlString, { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true });
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+let db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+db.on('error', function (err) {
+    if (err) { // couldn't connect
+        console.log('MongoDB connection error: ' + mongoDBUrlString);
+        process.exit();
+    }
+});
 
 // Set up express configuration
-var app = express();
+let app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cors());

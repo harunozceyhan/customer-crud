@@ -32,7 +32,7 @@ exports.getCustomerDetail = (req, res, next) => {
 exports.createCustomer = (req, res, next) => {
 	const customerData = req.body;
 	// Create new customer object with given request body
-    var customer = new Customer(
+    let customer = new Customer(
         {
             firstName: customerData.firstName,
             lastName: customerData.lastName,
