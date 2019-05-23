@@ -1,6 +1,7 @@
 import { GET_ALL_CUSTOMERS, GET_CUSTOMER_DETAIL } from './types';
 import {serverApiUrl} from '../config'
 import axios from 'axios';
+import {toastr} from 'react-redux-toastr'
 
 export const fetchAllCustomers = (customerList) => {
     return {
@@ -16,7 +17,7 @@ export const fetchAllCustomerData = () => {
                 dispatch(fetchAllCustomers(response.data))
             })
             .catch(error => {
-                throw(error);
+                toastr.error('Error', 'An error has occured while fetching customers!');
             });
     };
 };
@@ -35,7 +36,7 @@ export const fetchCustomerDetailData = (id) => {
                 dispatch(fetchCustomerDetail(response.data))
             })
             .catch(error => {
-                throw(error);
+                toastr.error('Error', 'An error has occured while fetching customer detail!');
             });
     };
 };

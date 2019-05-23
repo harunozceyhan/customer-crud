@@ -5,12 +5,25 @@ import Card from 'react-bootstrap/Card';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import {toastr} from 'react-redux-toastr'
+import axios from 'axios';
+import {serverApiUrl} from '../config'
 
 class CustomerList extends Component {
 
-    componentWillMount = () => {
+    componentDidMount = () => {
         this.props.fetchAllCustomerData();
     }
+
+    onCustomerDeleteClick = (customerId) => {
+
+        axios.delete(`${serverApiUrl}/${customerId}`).then(response => {
+            toastr.success('Success', 'Customer deleted successfully!');
+            this.props.fetchAllCustomerData();
+        }).catch(error => {
+            toastr.error('Error', 'An error has occured while deleting customer!');
+        });
+    };
 
     render() {
         const {customers} = this.props;
@@ -43,7 +56,7 @@ class CustomerList extends Component {
                                         <td>{customer.customerLifetimeValue}</td>
                                        <td className="buttons">
                                             <Link className="btn btn-primary btn-sm" to={`/customer-detail/${customer.customerID}`}>Edit</Link>
-                                            <Button variant="danger" size="sm" className="margin-left-12">Delete</Button>
+                                            <Button variant="danger" size="sm" className="margin-left-12" onClick={() => this.onCustomerDeleteClick(customer.customerID)}>Delete</Button>
                                         </td>
                                     </tr>
                                 )}
