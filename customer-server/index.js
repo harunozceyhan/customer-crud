@@ -30,3 +30,5 @@ app.use('/api', customer);
 app.listen(3001, () => {
     console.log('Server is up and running on port number 3001');
 });
+
+module.exports = app

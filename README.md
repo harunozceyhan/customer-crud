@@ -24,6 +24,16 @@ Default connection url: **_mongodb://127.0.0.1:27017/Customer_**
 
 - [http://localhost:3000/customers](http://localhost:3000/customers)
 
+## Server(customer-server) Project Run Test
+
+- cd customer-server
+- npm test
+
+## Client(customer-client) Project Run Test
+
+- cd customer-client
+- npm test
+
 ## Technologies Used
 - Client Side
     - React.js
@@ -36,3 +46,4 @@ Default connection url: **_mongodb://127.0.0.1:27017/Customer_**
     - Node.js
     - express
     - mongoose
+    - mocha
