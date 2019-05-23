@@ -42,8 +42,11 @@ Default connection url: **_mongodb://127.0.0.1:27017/Customer_**
     - redux-thunk
     - react-bootstrap
     - axios
+    - enzyme
+    - jest
 - Server Side
     - Node.js
     - express
     - mongoose
     - mocha
+    - chai

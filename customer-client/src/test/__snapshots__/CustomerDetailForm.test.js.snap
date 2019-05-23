@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerDetailForm snapshot test matches the snapshot 1`] = `
+<div>
+  <div
+    className="card"
+  >
+    <div
+      className="card-header"
+    >
+      <h3>
+        Edit
+         Customer
+      </h3>
+    </div>
+    <div
+      className="card-body"
+    >
+      <form
+        className=""
+        noValidate={true}
+      >
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            First name
+          </label>
+          <div
+            className="col-sm-8"
+          >
+            <input
+              className="form-control"
+              id="firstNameValidation"
+              name="firstName"
+              placeholder="First name..."
+              required={true}
+              type="text"
+              value="Test Name"
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Field is required
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            Last name
+          </label>
+          <div
+            className="col-sm-8"
+          >
+            <input
+              className="form-control"
+              id="lastNameValidation"
+              name="lastName"
+              placeholder="Last name..."
+              required={true}
+              type="text"
+              value="Test Last name"
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Field is required
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            Birthday
+          </label>
+          <div
+            className="col-sm-8"
+          >
+            <div
+              className="DayPickerInput"
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                placeholder="YYYY-M-D"
+                value="1996-10-12"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            Gender
+          </label>
+          <div
+            className="col-sm-8 row"
+          >
+            <div
+              className="margin-left-12 form-check"
+            >
+              <input
+                checked={false}
+                className="form-check-input"
+                id="genderValidation"
+                label="Male"
+                name="gender"
+                required={true}
+                type="radio"
+                value="m"
+              />
+              <label
+                className="form-check-label"
+                htmlFor="genderValidation"
+                type="checkbox"
+              >
+                Male
+              </label>
+              <div
+                className="invalid-feedback"
+              >
+                Field is required
+              </div>
+            </div>
+            <div
+              className="margin-left-12 form-check"
+            >
+              <input
+                checked={true}
+                className="form-check-input"
+                id="genderValidation"
+                label="Female"
+                name="gender"
+                required={true}
+                type="radio"
+                value="w"
+              />
+              <label
+                className="form-check-label"
+                htmlFor="genderValidation"
+                type="checkbox"
+              >
+                Female
+              </label>
+              <div
+                className="invalid-feedback"
+              >
+                Field is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            Last Contact
+          </label>
+          <div
+            className="col-sm-8"
+          >
+            <div
+              className="DayPickerInput"
+            >
+              <input
+                onBlur={[Function]}
+                onChange={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                placeholder="YYYY-M-D"
+                value="2017-06-01"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="form-group row"
+        >
+          <label
+            className="form-label col-form-label col-md-4"
+          >
+            Life Time
+          </label>
+          <div
+            className="col-sm-8"
+          >
+            <input
+              className="form-control"
+              id="lifeTimeValidation"
+              name="customerLifetimeValue"
+              placeholder="Life Time Value..."
+              required={true}
+              type="text"
+              value={4.5}
+            />
+            <div
+              className="invalid-feedback"
+            >
+              Field is required
+            </div>
+          </div>
+        </div>
+        <button
+          className="margin-left-12 float-right btn btn-success"
+          disabled={false}
+          type="submit"
+        >
+          Update
+           Customer
+        </button>
+        <button
+          className="float-right btn btn-secondary"
+          disabled={false}
+          type="button"
+        >
+          Return To Customer List
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

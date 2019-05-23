@@ -13,6 +13,30 @@ let mockData = {
 };
 let createdCustomerId = 0;
 
+describe('Unit testing the post /api route', function() {
+
+    it('should return OK status', function() {
+        return request(app)
+            .post('/api')
+            .send(mockData)
+            .set('Accept', 'application/json')
+            .then(function(response){
+                console.log(response.text);
+                createdCustomerId = JSON.parse(response.text).createdId;
+                assert.equal(response.status, 200)
+            })
+    });
+
+    it('should return 500 status', function() {
+        return request(app)
+            .post('/api')
+            .then(function(response){
+                assert.equal(response.status, 500)
+            })
+    });
+
+});
+
 describe('Unit testing the /api route', function() {
 
     it('should return OK status', function() {
@@ -39,31 +63,6 @@ describe('Unit testing the /api/:id route', function() {
         return request(app)
             .get('/api/3')
             .then(function(response){
-                assert.equal(response.status, 200)
-            })
-    });
-
-});
-
-describe('Unit testing the post /api route', function() {
-
-    it('should return 500 status', function() {
-        return request(app)
-            .post('/api')
-            .then(function(response){
-                assert.equal(response.status, 500)
-            })
-    });
-
-
-    it('should return OK status', function() {
-        return request(app)
-            .post('/api')
-            .send(mockData)
-            .set('Accept', 'application/json')
-            .then(function(response){
-                console.log(response.text);
-                createdCustomerId = JSON.parse(response.text).createdId;
                 assert.equal(response.status, 200)
             })
     });
